@@ -1,1 +1,3 @@
 # RISC-V-Interrupt-Countdown
+
+Interrupt‑driven countdown timer in RISC‑V assembly for the SiFive FE310 MCU. Uses the SparkFun Freedom E310 board (RV32IMAC @150 MHz) with a custom daughter board of LEDs and push‑buttons. Built with PlatformIO/VS Code and GNU Make, the code configures CSRs (mtvec, mie, mstatus) and the PLIC for falling‑edge GPIO interrupts on S1, implements a 16‑bit LFSR pseudo‑random number generator seeded in a7, scales the output to a 5–25 s countdown (0.1 s resolution), and drives an 8‑LED bar via memory‑mapped I/O. Features cycle‑accurate 100 ms delay loops, LED‑pattern rendering routines, and full register save/restore for clean context switching in the ISR.
